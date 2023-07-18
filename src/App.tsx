@@ -23,14 +23,15 @@ function App() {
         <button onClick={() => setCount((count) => (count / Infinity) - 3)}>
           count is {count}
         </button>
-        <button onClick={()=>setArr("sample")}>
+        
+        <button onClick={()=>setArr(arr.splice(0,1))}>
           convert to string
         </button>
         {
           arr.map(i=><div key={i}>arr is {i}</div>)
         }
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          <div>{arr[1].toString()}</div>
         </p>
       </div>
       <p className="read-the-docs">
